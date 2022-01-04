@@ -43,7 +43,7 @@ function createGenesisBlock(){
  const body = ['hello block']
  const tree = merkle('sha256').sync(body)
  const root = tree.root() || '0'.repeat(64)
- const difficulty = 0
+ const difficulty = 1;
  const nonce = 0
 
  const header = new BlockHeader(version,index,previousHash,time,root,difficulty,nonce)
@@ -244,7 +244,7 @@ function hashMatchDifficulty(hash,difficulty){
     const prefix = "0".repeat(difficulty);
     
     //높으면 높을수록 조건을 맞추기가 까다로워짐(nonce값과 time값이 바뀌면서 암호화값이 달라진다.)
-    return hashBinary.startsWith(prefix)
+    return hash.startsWith(prefix)
 
 }
 
