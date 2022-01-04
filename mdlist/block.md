@@ -6,4 +6,9 @@
 - HashPrevBlock
 - index
 
-## 
+## version
+## timestamp
+## HashPrevBlock
+## index
+
+
