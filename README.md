@@ -1,1 +1,7 @@
-# blockchain_study_js
+# 블록체인 
+
+## Block
+## Blockchain
+## Ws
+## Mining
+## Wallet
