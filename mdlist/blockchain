@@ -1,1 +1,8 @@
-# Blockchain
+# 블록체인
+## genesis block 
+## addBlock
+## nextBlock
+
+## getLastBlock()
+## createHash()
+##
