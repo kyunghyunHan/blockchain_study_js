@@ -1,0 +1,19 @@
+{
+  "name": "nodecoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "blocks.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "crypto-js": "^4.1.1",
+    "elliptic": "^6.5.4",
+    "fs": "^0.0.1-security",
+    "merkle": "^0.6.0",
+    "random": "^3.0.6"
+  }
+}
