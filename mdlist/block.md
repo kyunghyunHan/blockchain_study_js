@@ -30,6 +30,10 @@
 ![C3TZR1g81UNchGPKLQuxAL7oEwDJ42cT977qXjChRoAJaLMRNYADqaYTPf4p22Ah5vW1kkSf3Q2kirixsqcZh8289jKAmHKP8FsQrc4FegHoog7m9YKXn4v](https://user-images.githubusercontent.com/88940298/148062279-dc622bc9-d0c6-45c5-a71a-b86086a0a899.png)
 
 - 머클루트(merkle root, 32바이트) : 백서 글에서 설명한 머클트리의 루트 부분이다. 이 루트 부분이 SPV 노드를 가능하게 만들고 거래내역 검증을 쉽게 해준다.
+- 최초 데이터를 SHA256형태의 해시값으로 변환한다.
+- 가장 가까운 노드 2개를 한쌍으로 묶어 합친 후 그 값을 해시값으로 변환한다.
+- 하나가 남을때까지 2번 과정을 계속 반복되며 하나의 값만 남았을 때까지 이 과정을 반복한다.
+- 최종적으로 남는 하나의 블록은 모든 거래를 합친 해시값을 포함하고 있으며 이를 머클루트(Merkle Root)라 한다.
 ## difficulty
 - 난이도(해시 목표값, bits, 4바이트) : 블럭 생성은 약 10분에 하나씩 만들어지는 것으로 블록체인 네트워크에 설정되어 있다. 그러나 다른 중앙화된 시스템처럼 관리자가 있는 것이 아니므로 네트워크 안에서 이 시간이 조정되게 만들어져 있다. 그 시간을 조정하는 장치가 바로 이 비트(bits)라고 불리는 난이도(難易度, difficulty)이다.
 ## nonce
