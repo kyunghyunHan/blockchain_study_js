@@ -27,6 +27,8 @@
 - 이전블록해시(previous block hash, 32바이트) : 블록체인이 검증 가능한 체인이 되는 중요한 이유이다. 백서 글에서 설명했듯이 각 블록들은 이 이전 블록해시를 통해서 연결된다. 각 블록들이 이전 블록의 내용을 확인하고 저장하고 있으니 그 검증이 최초 블록인 제네시스 블록(genesis block)까지 이어지는 것이다. 블록 중 중간에 하나를 고치려면 그 뒤에 모든 블록을 고쳐야 하므로 각 블록의 거래내역들은 변경할 수 없는 영원한 기록이 되는 것이다.
 ## index
 ## merkle root
+![C3TZR1g81UNchGPKLQuxAL7oEwDJ42cT977qXjChRoAJaLMRNYADqaYTPf4p22Ah5vW1kkSf3Q2kirixsqcZh8289jKAmHKP8FsQrc4FegHoog7m9YKXn4v](https://user-images.githubusercontent.com/88940298/148062279-dc622bc9-d0c6-45c5-a71a-b86086a0a899.png)
+
 - 머클루트(merkle root, 32바이트) : 백서 글에서 설명한 머클트리의 루트 부분이다. 이 루트 부분이 SPV 노드를 가능하게 만들고 거래내역 검증을 쉽게 해준다.
 ## difficulty
 - 난이도(해시 목표값, bits, 4바이트) : 블럭 생성은 약 10분에 하나씩 만들어지는 것으로 블록체인 네트워크에 설정되어 있다. 그러나 다른 중앙화된 시스템처럼 관리자가 있는 것이 아니므로 네트워크 안에서 이 시간이 조정되게 만들어져 있다. 그 시간을 조정하는 장치가 바로 이 비트(bits)라고 불리는 난이도(難易度, difficulty)이다.
