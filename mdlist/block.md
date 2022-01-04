@@ -26,6 +26,7 @@
 ## HashPrevBlock
 - 이전블록해시(previous block hash, 32바이트) : 블록체인이 검증 가능한 체인이 되는 중요한 이유이다. 백서 글에서 설명했듯이 각 블록들은 이 이전 블록해시를 통해서 연결된다. 각 블록들이 이전 블록의 내용을 확인하고 저장하고 있으니 그 검증이 최초 블록인 제네시스 블록(genesis block)까지 이어지는 것이다. 블록 중 중간에 하나를 고치려면 그 뒤에 모든 블록을 고쳐야 하므로 각 블록의 거래내역들은 변경할 수 없는 영원한 기록이 되는 것이다.
 ## index
+- 몇번쨰 블록인지 확인
 ## merkle root
 ![C3TZR1g81UNchGPKLQuxAL7oEwDJ42cT977qXjChRoAJaLMRNYADqaYTPf4p22Ah5vW1kkSf3Q2kirixsqcZh8289jKAmHKP8FsQrc4FegHoog7m9YKXn4v](https://user-images.githubusercontent.com/88940298/148062279-dc622bc9-d0c6-45c5-a71a-b86086a0a899.png)
 
