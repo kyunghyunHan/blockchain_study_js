@@ -8,7 +8,28 @@
 
 
 ## 블록의 구성요소
+```js
+class BlockHeader { 
+    constructor(version ,index ,previousHash, time, merkleRoot,difficulty,nonce){
+        this.version = version 
+        this.index = index 
+        this.previousHash = previousHash 
+        this.time = time  
+        this.merkleRoot = merkleRoot
+        this.difficulty = difficulty
+        this.nonce = nonce
+    }
+}
 
+
+class Block {
+    constructor(header,body){
+        this.header = header
+        this.body = body
+    }
+}
+
+```
 #### 헤더
 - version
 - timestamp
