@@ -344,3 +344,17 @@ module.exports = {
 
 
 ```
+
+## hashMatchDifficulty
+```js
+function hashMatchDifficulty(hash,difficulty){
+    const hashBinary = hexToBinary(hash);
+    const prefix = "0".repeat(difficulty);
+    
+    //높으면 높을수록 조건을 맞추기가 까다로워짐(nonce값과 time값이 바뀌면서 암호화값이 달라진다.)
+    return hash.startsWith(prefix)
+
+}
+```
+- hashMatchDifficulty함수가 hexToBinary을 받아올경우 2진수 바뀌어 0을찾는 속도 및 넌스가 줄어듬
+- hash로 변경할 경우 16진수로 변경되어 
