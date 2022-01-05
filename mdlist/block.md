@@ -67,6 +67,16 @@ getVersion();
 - 몇번쨰 블록인지 확인
 ## merkle root
 ![C3TZR1g81UNchGPKLQuxAL7oEwDJ42cT977qXjChRoAJaLMRNYADqaYTPf4p22Ah5vW1kkSf3Q2kirixsqcZh8289jKAmHKP8FsQrc4FegHoog7m9YKXn4v](https://user-images.githubusercontent.com/88940298/148062279-dc622bc9-d0c6-45c5-a71a-b86086a0a899.png)
+```js
+const {MerkleTree} = require('merkletreejs');
+const SHA256 = require('crypto-js/sha256');
+
+const testSet =['a','b','c','c'];
+const testArray = testSet.map((v)=>SHA256(v));
+const tree = new MerkleTree(testArray,SHA256);
+const root = tree.getRoot();
+console.log(root.toString('hex'));
+```
 
 - 머클루트(merkle root, 32바이트) : 백서 글에서 설명한 머클트리의 루트 부분이다. 이 루트 부분이 SPV 노드를 가능하게 만들고 거래내역 검증을 쉽게 해준다.
 - 최초 데이터를 SHA256형태의 해시값으로 변환한다.
