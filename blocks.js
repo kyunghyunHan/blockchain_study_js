@@ -3,8 +3,8 @@ const merkle = require('merkle')
 const CryptoJs = require('crypto-js')
 const random = require('random')
 //예상 채굴시간과 난이도 조절 단위 수를 변수로 설정
-const BLOCK_GENERATION_INTERVAL = 10; //블록이 생성되는 간격
-const BLOCK_ADJUSTMENT_INTERVAL = 10  //블록마나 난이도가 조정되는 간격
+const BLOCK_GENERATION_INTERVAL = 60; //블록이 생성되는 간격
+const BLOCK_ADJUSTMENT_INTERVAL = 60;  //블록마나 난이도가 조정되는 간격
 class BlockHeader { 
     constructor(version ,index ,previousHash, time, merkleRoot,difficulty,nonce){
         this.version = version 
@@ -64,7 +64,9 @@ function nextBlock(data){
     const merkleRoot = merkleTree.root() || '0'.repeat(64)
 
     const header = new findBlock(version,index,previousHash,time,merkleRoot,difficulty);
+
     return new Block(header,data)
+    
 }
 //바로 이전 블록의 header의 value값들을 가져와서 string으로 바꾼 다음에 다 합친 내용을 암호화를 한다.
 function createHash(block){
@@ -94,7 +96,9 @@ function mineBlock(blockData){
     if(addBlock(newBlock)){
         const nw = require('./network')
         nw.broadcast(nw.responseLastMsg())
+        // console.log("hellohello")
         return newBlock
+ 
     } else {
         return null
     }
@@ -300,3 +304,5 @@ module.exports = {
 //인덱스가 이전블록에서 +1이 되어 있는지
 //이전블록이 제네시스 블록 및 이전블록인지 확인
 //배열별로 각 항목이 제대로 되어 있는지 확인
+
+

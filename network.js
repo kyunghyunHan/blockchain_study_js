@@ -1,5 +1,5 @@
 const WebSocket = require('ws')
-const wsPORT = process.env.WS_PORT || 6005
+const wsPORT = process.env.WS_PORT || 6008
 const bc = require('./blocks')
 //소켓에 주소를 넣을 공간 마련
 let sockets = []
