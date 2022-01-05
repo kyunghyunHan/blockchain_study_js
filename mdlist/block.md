@@ -47,6 +47,17 @@ class Block {
 ```
 - 바디는 많은거래 내역이 들어간다. 거래내역의 크기에 따라 블록 하나에 들어가는 거래내역의 수도 달라진다. 바디에는 머클트리를 따로 저장하지 않는다. 바디에는 INPUT , OUTPUT같은 거래 그 자체만 들어 있다.
 ## version
+```js
+const fs = require('fs');//filesystem
+
+function getVersion(){
+    const package = fs.readFileSync("../package.json");
+    console.log(package.toString("utf8"));
+};
+
+
+getVersion();
+```
 - 버전(version, 4바이트) : 말 그대로 이 블록헤더의 버전이다(윈도우 7,8, 10과 같은). 현재 이 블록헤더를 만든 비트코인 프로그램의 버전 번호가 된다.
 ## timestamp
 - 타임스탬프(timestamp, 4바이트) : 블록의 대략적인 생성 시간을 뜻한다.
